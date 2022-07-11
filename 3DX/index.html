@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>X3D</title>
+	<script type='text/javascript' src='https://www.x3dom.org/download/x3dom.js'> </script> 
+    <link rel='stylesheet' type='text/css' href='https://www.x3dom.org/download/x3dom.css'>
+</head>
+<body background="\imagen\espacio360.jpg">
+	<h1 style="text-align: center; color: white; margin-top: 30px;">Hurrle Sistema Solar</h1>
+	<x3d class="espacio" height="500px" width="1230px">
+    <scene render="true" visible="true" bboxcenter="0,0,0" bboxsize="0,0,0" pickmode="idBuf" dopickpass="true">
+
+      <transform def="SSolar" rotation="1 0 1 -0.4" render="true" visible="true" bboxcenter="0,0,0" bboxsize="-1,-1,-1" center="0,0,0" translation="0,0,0" scale="1,1,1" scaleorientation="0,0,0,0">
+        <shape render="true" visible="true" bboxcenter="0,0,0" bboxsize="-1,-1,-1" ispickable="true">
+          <appearance sorttype="auto" alphaclipthreshold="0.1">
+            <material diffusecolor="1 1 0" ambientintensity="0.2" emissivecolor="0,0,0" shininess="0.2" specularcolor="0,0,0"></material>
+            <imagetexture url="&quot;texturas/csol.jpg&quot;" repeats="true" repeatt="true" scale="true" hidechildren="true"></imagetexture>
+          </appearance>
+          <sphere solid="true" ccw="true" usegeocache="true" lit="true" radius="1" subdivision="24,24"></sphere>
+        </shape>
+        <transform scale="0.09 0.09 0.09" translation="1.75 0 0" render="true" visible="true" bboxcenter="0,0,0" bboxsize="-1,-1,-1" center="0,0,0" rotation="0,0,0,0" scaleorientation="0,0,0,0">
+          <inline url="&quot;mercurio.x3d&quot;" render="true" visible="true" bboxcenter="0,0,0" bboxsize="-1,-1,-1" load="true" namespacename=""></inline>
+        </transform>
+        <transform scale="0.15 0.15 0.15" translation="-2 0 -2" render="true" visible="true" bboxcenter="0,0,0" bboxsize="-1,-1,-1" center="0,0,0" rotation="0,0,0,0" scaleorientation="0,0,0,0">
+          <inline url="&quot;venus.x3d&quot;" render="true" visible="true" bboxcenter="0,0,0" bboxsize="-1,-1,-1" load="true" namespacename=""></inline>
+        </transform>
+        <transform scale="0.2 0.2 0.2" translation="3 0 3" render="true" visible="true" bboxcenter="0,0,0" bboxsize="-1,-1,-1" center="0,0,0" rotation="0,0,0,0" scaleorientation="0,0,0,0">
+          <inline url="&quot;tierra.x3d&quot;" render="true" visible="true" bboxcenter="0,0,0" bboxsize="-1,-1,-1" load="true" namespacename=""></inline>
+          <transform translation="1 1 1" scale="0.2 0.2 0.2" render="true" visible="true" bboxcenter="0,0,0" bboxsize="-1,-1,-1" center="0,0,0" rotation="0,0,0,0" scaleorientation="0,0,0,0">
+            <inline url="star-wars-vader-tie-fighter.x3d" render="true" visible="true" bboxcenter="0,0,0" bboxsize="-1,-1,-1" load="true" namespacename=""></inline>
+            </transform>
+        </transform>
+        <transform scale="0.15 0.15 0.15" translation="-5 0 0" render="true" visible="true" bboxcenter="0,0,0" bboxsize="-1,-1,-1" center="0,0,0" rotation="0,0,0,0" scaleorientation="0,0,0,0">
+          <inline url="&quot;marte.x3d&quot;" render="true" visible="true" bboxcenter="0,0,0" bboxsize="-1,-1,-1" load="true" namespacename=""></inline>
+        </transform>
+        <transform scale="0.6 0.6 0.6" translation="-7 0 -8" render="true" visible="true" bboxcenter="0,0,0" bboxsize="-1,-1,-1" center="0,0,0" rotation="0,0,0,0" scaleorientation="0,0,0,0">
+          <inline url="&quot;jupiter.x3d&quot;" render="true" visible="true" bboxcenter="0,0,0" bboxsize="-1,-1,-1" load="true" namespacename=""></inline>
+        </transform>
+        <transform scale="0.5 0.5 0.5" translation="-12 0 12" render="true" visible="true" bboxcenter="0,0,0" bboxsize="-1,-1,-1" center="0,0,0" rotation="0,0,0,0" scaleorientation="0,0,0,0">
+          <anchor description="Info Saturno" url="&quot;saturno.x3d&quot;" render="true" visible="true" bboxcenter="0,0,0" bboxsize="-1,-1,-1" parameter="">
+            <inline url="&quot;saturno.x3d&quot;" render="true" visible="true" bboxcenter="0,0,0" bboxsize="-1,-1,-1" load="true" namespacename=""></inline>
+          </anchor>
+        </transform>
+        <transform scale="0.3 0.3 0.3" translation="11 0 12" render="true" visible="true" bboxcenter="0,0,0" bboxsize="-1,-1,-1" center="0,0,0" rotation="0,0,0,0" scaleorientation="0,0,0,0">
+          <inline url="&quot;urano.x3d&quot;" render="true" visible="true" bboxcenter="0,0,0" bboxsize="-1,-1,-1" load="true" namespacename=""></inline>
+        </transform>
+        <transform scale="0.15 0.15 0.15" translation="12 0 -12" render="true" visible="true" bboxcenter="0,0,0" bboxsize="-1,-1,-1" center="0,0,0" rotation="0,0,0,0" scaleorientation="0,0,0,0">
+          <inline url="&quot;neptuno.x3d&quot;" render="true" visible="true" bboxcenter="0,0,0" bboxsize="-1,-1,-1" load="true" namespacename=""></inline>
+        </transform>
+        <timesensor def="timer" cycleinterval="60" loop="true" enabled="true" first="true"></timesensor>
+        <orientationinterpolator def="rotator" key="0 0.5 1" keyvalue="0 1 0 0 0 1 0 3.14 0 1 0 6.28" interpolation="LINEAR">
+        </orientationinterpolator>
+      </transform>
+      <route fromnode="timer" fromfield="fraction_changed" tonode="rotator" tofield="set_fraction"></route>
+      <route fromnode="rotator" fromfield="value_changed" tonode="SSolar" tofield="set_rotation"></route>
+    <matrixtransform render="true" visible="true" bboxcenter="0,0,0" bboxsize="-1,-1,-1" matrix="1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1"><inline render="false" visible="true" bboxcenter="0,0,0" bboxsize="-1,-1,-1" url="" load="true" namespacename=""></inline></matrixtransform><matrixtransform render="true" visible="true" bboxcenter="0,0,0" bboxsize="-1,-1,-1" matrix="1,0,0,0,0,1,0,0,0,0,1,0,0,0,0,1"><inline render="false" visible="true" bboxcenter="0,0,0" bboxsize="-1,-1,-1" url="" load="true" namespacename=""></inline></matrixtransform></scene>
+  </x3d>
+</body>
+</html>
