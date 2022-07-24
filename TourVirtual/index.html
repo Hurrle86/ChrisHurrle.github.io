@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Realidad Virtual con A-Frame</title>
+	<script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+</head>
+<body>
+	<a-scene>
+		<a-assets>
+      		<img id="tour1" src="imagen/skate.jpg" />
+	      	<img id="tour2" src="imagen/patineta.png" />
+	   
+	      	<img id="b2" src="imagen/patineta.png" />
+    	</a-assets>
+		<a-sky src="#tour1"></a-sky>
+ 		
+    	<a-image src="#b2" position="2.5 -0.5 -10" onclick="show('tour2')"></a-image>
+
+		<a-camera>
+      		<a-cursor color="red"></a-cursor>
+    	</a-camera>
+	</a-scene>
+	<script src="js/index.js"></script>
+</body>
+</html>
