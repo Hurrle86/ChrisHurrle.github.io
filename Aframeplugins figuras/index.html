@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ambientacion en realidad virtual</title>
+	<script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+	<script src="https://unpkg.com/aframe-environment-component@1.3.1/dist/aframe-environment-component.min.js"></script>
+</head>
+<body>
+	<a-scene>
+		<!-- Entornos preestablecidos para Environment Component: none, default, contact, egypt, checkerboard, forest, goaland, yavapai, goldmine, threetowers, poison, arches, tron, japan, dream, volcano, starry, osiris  -->
+		<a-entity environment="preset: japan"></a-entity>
+
+		<!-- Un plano -->
+
+		<!-- Las geometrías incluidas en A-Frame: box, circle, cone, cylindre, dodecahedron, octahedron, plane, ring, sphere, tetrahedron, torus, torusKnot, triangle -->
+		<a-entity geometry="primitive: plane; width: 10; height: 4;" material="color: white" rotation="-90 0 0" position="0 0.1 0"></a-entity>
+
+		<a-entity geometry="primitive: box; width: 1; height: 1; depth: 1"></a-entity>
+
+		<a-entity geometry="primitive: ring; radiusInner: 8.0; radiusOuter: -5"
+          material="side: double"></a-entity>
+
+      <a-entity geometry="primitive: triangle" material="side: double"></a-entity>
+
+
+
+
+
+
+
+		<a-entity geometry="primitive: ring; width: 4; height: 4;" material="color: red" rotation="-90 0 0" position="0 0.1 0"></a-entity>
+	</a-scene>
+</body>
+</html>
