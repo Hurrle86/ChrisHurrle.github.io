@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Ambientacion en Realidad Virtual</title>
+  <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-environment-component@1.3.1/dist/aframe-environment-component.min.js"></script>
+  <!-- Animacion-->
+  <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+</head>
+<body>
+    <a-scene>
+<!-- Precarga -->
+<a-assets>
+    <a-assets-item id="baile" src="enano.glb">
+
+    </a-assets-item>
+</a-assets>
+        <!-- Entornos preestablecidos para Environment Component: none, default, contact, egypt, checkerboard, forest, goaland, yavapai, goldmine, threetowers, poison, arches, tron, japan, dream, volcano, starry, osiris  -->
+        <a-entity environment="preset: japan">
+        </a-entity>
+
+      <!-- Un personaje-->  
+      <a-entity gltf-model="#baile" scale="0.008 0.008 0.008" position="1 1 0" animation-mixer='clip: *;'><a-entity>
+    </a-scene>
+</body>
+</html>
